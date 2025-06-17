@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GalineosLive // Centrum Strategii i Wielkich Wygranych</title>
+    <meta name="description" content="Dołącz do społeczności GalineosLive, gdzie pasja do slotów łączy się ze strategią. Odkryj najlepsze bonusy kasynowe, analizy gier i oglądaj na żywo polowanie na jackpoty.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="canonical" href="https://galineoslive-stream.com/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --bg: #F5F5F5; /* Light Gray */
+            --surface: #FFFFFF; /* White */
+            --primary: #1A1A1A; /* Black */
+            --secondary: #555555;
+            --accent: #FF3B3B; /* Vibrant Red */
+            --border: #E0E0E0;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg); 
+            color: var(--primary); 
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 3rem;
+            font-family: 'Anton', sans-serif;
+            text-align: center;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+            border: 3px solid var(--primary);
+        }
+        .btn-accent {
+            background-color: var(--primary);
+            color: var(--accent);
+        }
+        .btn-accent:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+            border-color: var(--accent);
+        }
+
+        .section { padding: 6rem 1.5rem; }
+        .container { max-width: 1200px; margin: auto; }
+        
+        .header {
+            padding: 1rem 1.5rem;
+            background-color: rgba(245, 245, 245, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .hero {
+            padding: 4rem 1.5rem;
+            background-color: var(--accent);
+        }
+        .hero h1 {
+            font-size: 7rem;
+            line-height: 1;
+            color: var(--primary);
+        }
+        .hero p {
+            margin-top: 1.5rem;
+            font-size: 1.25rem;
+            color: var(--primary);
+            max-width: 650px;
+            font-weight: 500;
+        }
+
+        .stream-embed {
+             border: 2px solid var(--border);
+             padding: 1rem;
+             background-color: var(--surface);
+        }
+        
+        .section-title {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+             font-size: 1.125rem;
+             color: var(--secondary);
+             max-w-3xl;
+             margin: auto;
+             text-align: center;
+             margin-bottom: 4rem;
+             line-height: 1.8;
+        }
+        
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .about-card {
+            padding: 2.5rem;
+        }
+        .about-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        .about-card p {
+            color: var(--secondary);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .about-card strong {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .casino-card {
+            padding: 2rem;
+        }
+        .casino-card h4 { font-size: 2.5rem; line-height: 1.1; }
+        .casino-card .bonus {
+             font-family: 'Inter', sans-serif;
+             font-weight: 700;
+             font-size: 1.5rem;
+             color: var(--accent);
+             margin: 1rem 0;
+        }
+        .casino-card .desc {
+            color: var(--secondary);
+            flex-grow: 1;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        
+        .slot-card {
+            overflow: hidden;
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+        }
+        .slot-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: all 0.4s ease;
+        }
+        .slot-card:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+         .slot-card .content { padding: 1.5rem; }
+         .slot-card h4 { font-size: 1.75rem; }
+         .slot-card p {
+            color: var(--secondary);
+            margin-top: 0.5rem;
+         }
+
+        footer {
+            background-color: var(--surface);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="sticky top-0 z-50">
+        <div class="container flex justify-between items-center">
+            <a href="#" class="font-heading text-3xl tracking-wider">GALINEOSLIVE</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-secondary hover:text-primary transition-colors font-bold">Nasza Misja</a>
+                <a href="#casinos" class="text-secondary hover:text-primary transition-colors font-bold">Polecane Kasyna</a>
+                <a href="#slots" class="text-secondary hover:text-primary transition-colors font-bold">Top Sloty</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container">
+                <div class="max-w-3xl">
+                    <h1 class="font-heading">GalineosLive</h1>
+                    <p>
+                       Witaj w epicentrum inteligentnego hazardu i fantastycznej zabawy. To nie jest kolejne miejsce, gdzie bezmyślnie kręci się spiny. To platforma dla świadomych graczy, którzy cenią sobie strategię, analizę i przede wszystkim – społeczność. Razem tworzymy przestrzeň, gdzie pasja do gier łączy się z wiedzą, a każda sesja to nowa lekcja i szansa na spektakularną wygraną.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-black">
+             <div class="container">
+                <div class="stream-embed">
+                     <iframe 
+                        title="GalineosLive Kick Stream" 
+                        src="https://player.kick.com/galineos?autoplay=true&muted=true" 
+                        class="w-full h-auto aspect-video"
+                        frameborder="0" 
+                        scrolling="no"
+                        allow="autoplay; fullscreen">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="section">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Co Nas Wyróżnia?</h2>
+                    <p class="section-subtitle">W świecie streamingu kasynowego łatwo jest się zagubić. My postawiliśmy na trzy filary, które czynią naszą społeczność wyjątkową i sprawiają, że widzowie wracają na każdy stream. To nasza obietnica jakości, transparentności i, co najważniejsze, autentycznej pasji do gry.</p>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8 mt-16">
+                    <div class="about-card">
+                        <h3 class="font-heading">Strategia i Analiza</h3>
+                        <p>U nas gra to nie tylko kwestia szczęścia. Każda sesja jest poprzedzona analizą. Zagłębiamy się w mechanikę slotów, badamy ich <strong>RTP (Return to Player)</strong> i <strong>wolatility (zmienność)</strong>, aby podejmować świadome decyzje. Na streamach otwarcie dyskutujemy o strategiach zarządzania <strong>bankrollem</strong>, technikach <strong>bonus huntingu</strong> i tym, jak maksymalizować potencjał każdej gry. To wiedza, która przydaje się każdemu graczowi, od nowicjusza po weterana. Dzielimy się spostrzeżeniami na temat tego, które sloty są "gorące", a które lepiej omijać, tworząc bazę wiedzy dla całej społeczności.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3 class="font-heading">Ekskluzywne Partnerstwa</h3>
+                        <p>Siła naszej społeczności pozwala nam na więcej. Budujemy silne i transparentne relacje z najlepszymi kasynami online na rynku. To nie są przypadkowe współprace. Dzięki temu negocjujemy dla Was <strong>ekskluzywne bonusy</strong>, które nie są dostępne nigdzie indziej. Mówimy tu o większych bonusach od depozytu, dodatkowych pakietach <strong>darmowych spinów</strong> i specjalnych promocjach. Naszym celem jest zapewnienie Wam realnej przewagi i wartości dodanej – więcej środków na grę to więcej szans na trafienie tego wymarzonego <strong>jackpota</strong>.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3 class="font-heading">Pozytywna Społeczność</h3>
+                        <p>Atmosfera jest wszystkim. Stworzyliśmy miejsce, gdzie każdy czuje się jak u siebie. Nasz czat to serce streamu – pełen energii, wzajemnego szacunku i wsparcia. Razem świętujemy wielkie wygrane i wspieramy się w trudniejszych momentach. Galineos dba o to, by każda transmisja była interaktywna i pełna pozytywnych emocji. To tutaj rodzą się przyjaźnie, wymieniane są doświadczenia i wspólnie przeżywamy każdą chwilę, od pierwszego spinu po ostatni.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="casinos" class="section bg-surface">
+            <div class="container">
+                <h2 class="section-title">Sprawdzone i <span style="color: var(--accent);">Zaufane Kasyna</span></h2>
+                <p class="section-subtitle">Bezpieczeństwo i uczciwość to fundament. Poniższe platformy to nie tylko miejsca z naszej listy polecanych – to kasyna, w których sami gramy i które przeszły nasze szczegółowe testy. Sprawdziliśmy ich licencje, reputację wśród graczy, jakość obsługi klienta oraz, co kluczowe, szybkość i niezawodność wypłat. Możesz być pewien, że grając tutaj, Twoje środki są bezpieczne, a rozgrywka jest w 100% uczciwa.</p>
+                <div id="casino-grid" class="grid md:grid-cols-3 gap-8">
+                    <!-- Casinos will be injected by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="slots" class="section">
+             <div class="container">
+                <h2 class="section-title">Ulubione Sloty <span style="color: var(--accent);">Społeczności</span></h2>
+                <p class="section-subtitle">Te gry zapisały się złotymi zgłoskami w historii naszych streamów. To na nich przeżywaliśmy najbardziej emocjonujące chwile i świętowaliśmy największe wygrane. Każdy z tych automatów został wybrany przez społeczność jako faworyt, gwarantujący nie tylko świetną zabawę, ale i ogromny potencjał na rozbicie banku.</p>
+                <div id="slot-grid" class="grid md:grid-cols-3 gap-6">
+                    <!-- Slot wins will be injected by JavaScript -->
+                </div>
+             </div>
+        </section>
+        
+    </main>
+    
+    <footer class="py-12">
+        <div class="container text-center text-secondary">
+             <div class="flex justify-center space-x-6 text-2xl mb-8">
+                <a href="https://kick.com/galineos" target="_blank" rel="noopener" class="hover:text-primary transition-colors" title="Kick"><i class="fa-brands fa-kickstarter-k"></i></a>
+                <a href="https://www.twitch.tv/galineos" target="_blank" rel="noopener" class="hover:text-primary transition-colors" title="Twitch"><i class="fab fa-twitch"></i></a>
+                <a href="https://www.youtube.com/@GalineosLive" target="_blank" rel="noopener" class="hover:text-primary" title="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="text-sm max-w-3xl mx-auto">Wszelkie treści prezentowane na tej stronie oraz podczas transmisji na żywo mają charakter wyłącznie rozrywkowy. Hazard wiąże się z wysokim ryzykiem i może prowadzić do uzależnienia. Graj odpowiedzialnie i tylko za środki, na których utratę możesz sobie pozwolić. Usługi przeznaczone są wyłącznie dla osób pełnoletnich (18+).</p>
+            <p class="mt-4 text-xs opacity-50 font-heading">© 2025 // GALINEOSLIVE</p>
+        </div>
+    </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // --- DATA ---
+    const casinos = [
+        { name: 'NV Casino', bonus: '2000€ + 225 Darmowych Spinów', desc: 'Absolutny top, jeśli chodzi o ofertę powitalną i bibliotekę gier. NV Casino to wybór dla graczy, którzy oczekują maksimum wartości na start. Ich reputacja opiera się na szybkich wypłatach i profesjonalnym podejściu do klienta, co czyni ich jednym z naszych głównych partnerów.', link: 'https://galineoslive-stream.com/' },
+        { name: 'Vincispin', bonus: '500€ + 350 Darmowych Spinów', desc: 'Ulubieniec społeczności, głównie za sprawą przyjaznego interfejsu i gigantycznego pakietu darmowych spinów. To idealne miejsce do testowania nowych gier i budowania bankrollu. Ich program lojalnościowy również zasługuje na uznanie, nagradzając aktywnych graczy.', link: 'https://galineoslive-stream.com/' },
+        { name: 'Bethall', bonus: '500€ + 200 Darmowych Spinów', desc: 'Synonim niezawodności i bezpieczeństwa. Bethall to kasyno dla tych, którzy cenią sobie spokój ducha. Światowej klasy obsługa klienta, transparentne warunki i stabilna platforma sprawiają, że to pewny wybór na długie sesje bez żadnych niespodzianek.', link: 'https://galineoslive-stream.com/' }
+    ];
+    
+    const slots = [
+        { img: './img/bigbassvegas-galineoslive.webp', title: 'Big Bass Vegas', desc: 'Klasyk, który nigdy się nie nudzi. Polowanie na rybaka z mnożnikami to już tradycja na naszych streamach. Ta gra udowadnia, że prosta mechanika w połączeniu z ogromnym potencjałem to przepis na sukces.' },
+        { img: './img/frkn-bananas-galineoslive.webp', title: 'FRKN Bananas', desc: 'Czyste, szalone emocje. Ten slot to kwintesencja dynamicznej rozgrywki z dzikimi mnożnikami. Kiedy "banany" zaczynają sypać, czat eksploduje. To nasz wybór na szybką dawkę adrenaliny.' },
+        { img: './img/royaltyofolimpus-galineoslive.webp', title: 'Royalty of Olympus', desc: 'Gra dla cierpliwych graczy, którzy wiedzą, że największe skarby kryją się w bonusach. Wejście do rundy darmowych spinów w tej grze to jak audiencja u Zeusa – może odmienić losy całej sesji.' }
+    ];
+    
+    // --- DYNAMIC CONTENT INJECTION ---
+    const casinoGrid = document.getElementById('casino-grid');
+    if(casinoGrid) {
+        casinoGrid.innerHTML = casinos.map(c => `
+            <div class="card casino-card">
+                <h4 class="font-heading">${c.name}</h4>
+                <p class="bonus">${c.bonus}</p>
+                <p class="desc">${c.desc}</p>
+                <a href="${c.link}" target="_blank" rel="noopener" class="btn btn-accent mt-6">Odbierz Bonus</a>
+            </div>
+        `).join('');
+    }
+    
+    const slotGrid = document.getElementById('slot-grid');
+    if(slotGrid) {
+        slotGrid.innerHTML = slots.map(w => `
+            <div class="slot-card">
+                <img src="${w.img}" alt="${w.title}">
+                <div class="content">
+                    <h4 class="font-heading">${w.title}</h4>
+                    <p>${w.desc}</p>
+                </div>
+            </div>
+        `).join('');
+    }
+});
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</body>
+</html>
